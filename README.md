@@ -1,1 +1,9 @@
 # CS-340
+
+The main design of a client-server application such as this one uses the concept of the stack. At the lowest layer of the stack, we have the data. This data is usually stored in a database. In our case, we used MongoDB. This layer can sometimes provide an interface but it may not be in the language or format we prefer. On top of the database layer, we have the middleware layer. This layer serves as an API for interacting with the database. We wrap the rather complex interfacing with a simplistic Create Read Update Delete (CRUD) function structure. We do this in a language that is going to work well with our next layer, the User Interface (UI). The UI layer is what the client sees. All of the human interfaces, displays, and graphics are rendered by this layer. The UI will frequently make requests to the middleware API to interact with the database. This is an example of a full stack application.
+
+One could also make the arguement that this adhears to the Model View Controller (MVC) pattern. In our case, the database is the model, the UI is the view, and the API is the controller.
+
+This style of development promotes the idea of seperating layers of the application into related parts. This reduces clutter and therefore complexity. This project would be much more difficult to work with as a developer if all the code was stuffed into the UI. By using the full stack MVC structure, we have created a readable, reuseable, and functional application that fulfils the needs of the client.
+
+This is the tried and trusted method for running web applications. If you wanted to scale this application to support usage from thousands of concurrent users, the arrangement of the hardware is going to be the most notable changes. Even with multiple servers at each layer of the applicaion, the overall structure of the application itself from a software standpoint is going to lok very similar to how it does now.
